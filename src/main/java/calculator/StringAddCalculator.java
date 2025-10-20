@@ -11,6 +11,8 @@ public class StringAddCalculator {
         if (input == null || input.isEmpty()) {
             return 0; // 빈 문자열은 0 출력
         }
+
+        input = input.replace("\\n", "\n");
         
         // 구분자에 따른 분리 및 검증
         String[] tokens = InputParser.split(input);
