@@ -13,8 +13,9 @@ public class InputParser {
     public static boolean hasCustomDelimiter(String input) {
         return input.startsWith(Delimiter.CUSTOM_PREFIX);
     }
-    // 기본 구분자 (, :)로만 분리하는 로직
-    public static String[] splitByDefault(String input) {
+
+    // 구분자에 따른 조건문
+    public static String[] split(String input) {
         if(!hasCustomDelimiter(input)) {
             return input.split(Delimiter.DEFAULT_REGEX, -1);
         }
